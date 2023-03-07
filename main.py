@@ -1,6 +1,9 @@
 import streamlit as st
 from langchain import PromptTemplate
 from langchain.llms import OpenAI
+import os
+
+os.environ["OPENAI_API_KEY"] = "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"
 
 template = """
     Below is an email that may be poorly worded.
@@ -39,6 +42,7 @@ prompt = PromptTemplate(
 def load_LLM():
     """Logic for loading the chain you want to use should go here."""
     # Make sure your openai_api_key is set as an environment variable
+    
     llm = OpenAI(temperature=.7)
     return llm
 
