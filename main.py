@@ -3,7 +3,10 @@ from langchain import PromptTemplate
 from langchain.llms import OpenAI
 import os
 
-os.environ["OPENAI_API_KEY"] = "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"
+headers = {
+    "authorization": st.secrets["OPEN_API_KEY"],
+    "content-type": "application/json"
+}
 
 template = """
     Below is an email that may be poorly worded.
