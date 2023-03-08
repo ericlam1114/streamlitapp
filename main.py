@@ -4,7 +4,7 @@ from langchain.llms import OpenAI
 import os
 
 headers = {
-    "authorization": st.secrets["OPEN_API_KEY"],
+    "authorization": st.secrets["OPENAI_API_KEY"],
     "content-type": "application/json"
 }
 
